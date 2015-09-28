@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Kinto — by Mozilla Services</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Codeply">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body >
+    <nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsible">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand text-danger" href="#">Kinto</a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-collapsible">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a href="#section1">Start</a></li>
+                <li><a href="#section2">Key Features</a></li>
+                <li><a href="#section3">Get Started</a></li>
+                <li><a href="#section4">Contact</a></li>
+                <li>&nbsp;</li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-heart-o fa-lg"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="container-fluid" id="section1">
+    <div class="v-center">
+	<p class="text-center"><img src="//kinto.readthedocs.org/en/latest/_images/logo.svg"/></p>
+        <h1 class="text-center">Kinto, universal storage.</h1>
+        <h2 class="text-center lato animate slideInDown">Add <b>share and sync</b> features in a heartbeat!</h2>
+        <p class="text-center">
+            <br>
+            <a href="#section2" class="btn btn-danger btn-lg btn-huge lato">Learn more</a>
+        </p>
+    </div>
+    <a href="#section2">
+        <div class="scroll-down bounceInDown animated">
+            <span>
+                <i class="fa fa-angle-down fa-2x"></i>
+            </span>
+        </div>
+    </a>
+</section>
+
+<section class="container-fluid" id="section2">
+    <h3 class="text-center lato slideInUp animate">If you don't want to waste energy with backend stuff, Kinto is a <strong>generic and open</strong> solution that you can run anywhere.</h3>
+
+    <div class="container v-center">
+
+        <div class="row">
+            <div class="col-sm-4 text-center">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <div class="panel panel-default slideInUp animate">
+                            <div class="panel-heading">
+			    <i class="fa fa-cloud-upload fa-4x"></i> 
+                            <h3>Offline-first</h3></div>
+                            <div class="panel-body">
+                                <p>Kinto.js saves you from offline and synchronization headaches!</p>
+                                <hr>GO
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <div class="panel panel-default slideInLeft animate">
+                            <div class="panel-heading">
+			    <i class="fa fa-flag-checkered  fa-4x"></i> 
+                            <h3>Lightweight</h3></div>
+                            <div class="panel-body">
+                                <p>The ecosystem relies on a very simple HTTP protocol, compatible with any platform!</p>
+                                <hr>GO
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 text-center">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <div class="panel panel-default slideInRight animate">
+                            <div class="panel-heading">
+			    <i class="fa fa-eye-slash  fa-4x"></i> 
+                            <h3>Privacy</h3></div> 
+                            <div class="panel-body">
+                                <p>Kinto is Open Source, supports data encryption and is easy to self-host!</p>
+                                <hr>
+				GO
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="text-center"><img src="//kinto.readthedocs.org/en/latest/_images/overview-use-cases.png"/>
+        <!--/row-->
+        <div class="row">
+            <br>
+        </div>
+    </div>
+    <!--/container-->
+</section>
+
+<section class="container-fluid" id="section3">
+    <h1 class="text-center">Get started</h1>
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <h3 class="text-center lato slideInUp animate">Sync data with <strong>a few lines of code</strong> in your Web application. Use our demo server or run your own.</h3>
+            <br>
+            <div class="row">
+                <div class="col-xs-4">Oulala, syncing data with the JavaScript client is a piece of cake.
+   		<pre>
+                var kinto = new Kinto({remote: "https://kinto.dev.mozaws.net/v1"});
+                var tasks = kinto.collection("tasks");
+
+                tasks.create({label: "Wake up early"});
+
+                tasks.sync()
+                  .then(function(res) {
+                    console.log("Done!");
+		  });
+ 		</pre>
+		</div>
+
+                <div class="col-xs-4 col-xs-offset-1">
+                <p>Running your own server is a matter of one command.</p>
+		<pre>
+		> docker run -p 8888:8888 kinto/kinto-server
+		</pre>
+		</div>
+                <div class="col-xs-2"></div>
+            </div>
+            <br>
+            <p class="text-center">
+                <img src="//placehold.it/444x222/444/FFF" class="img-responsive thumbnail center-block ">
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid" id="section5">
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+            <h2 class="text-center lato">Highlights.</h2>
+            <hr>
+            <div class="media">
+                <h3>Fine-grained permissions</h3>
+                <div class="media-body media-middle">
+                    <p>Kinto aims to facilitate this collaboration and let people manipulate these data even when offline.</p>
+                </div>
+                <div class="media-right">
+                    <img src="//placehold.it/100">
+                </div>
+            </div>
+            <hr>
+            <div class="media">
+                <h3>React + Kinto = <3</h3>
+                <div class="media-left">
+                    <img src="//placehold.it/100">
+                </div>
+                <div class="media-body media-middle">
+                    <p>You want to build a Javascript app on top of Kinto? We have a boilerplate ready for you!</p>
+                </div>
+            </div>
+            <hr>
+            <div class="media">
+                <h3>Scalable</h3>
+                <div class="media-body media-middle">
+                    <p>Kinto is built at Mozilla where Web APIs received millions of hits per day.</p>
+                </div>
+                <div class="media-right">
+                    <img src="//placehold.it/100">
+                </div>
+            </div>
+            <hr>
+            <div class="media">
+                <h3>Secure</h3>
+                <div class="media-left">
+                    <img src="//placehold.it/100">
+                </div>
+                <div class="media-body media-middle">
+                    <p>Follows best practices in terms of HTTP protocol and security concerns.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid" id="section4">
+    <div class="row">
+        <div class="col-sm-1 col-sm-offset-3 col-xs-4 text-center">
+            <a href="http://github.com/Kinto"><i class="fa fa-github fa-4x"></i></a>
+        </div>
+        <div class="col-sm-1 col-xs-4 text-center">
+            <a href="https://twitter.com/hashtag/kinto"><i class="fa fa-twitter fa-4x"></i></a>
+        </div>
+        <div class="col-sm-1 col-xs-4 text-center">
+	    <a href="http://kintojs.readthedocs.org"><i class="fa fa-book fa-4x"></i></a>
+        </div>
+        <div class="col-sm-1 col-xs-4 text-center">
+            <a href="https://mail.mozilla.org/listinfo/kinto"><i class="fa fa-comments-o fa-4x"></i></a>
+        </div>
+        <div class="col-sm-1 col-xs-4 text-center">
+            <a href="http://stackoverflow.com/questions/tagged/kinto"><i class="fa fa-stack-overflow fa-4x"></i></a>
+        </div>
+    </div>
+</section>
+
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-3 column">
+                <h4>Information</h4>
+                <ul class="nav">
+                    <li><a href="about-us.html">Products</a></li>
+                    <li><a href="about-us.html">Services</a></li>
+                    <li><a href="about-us.html">Benefits</a></li>
+                    <li><a href="elements.html">Developers</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-6 col-md-3 column">
+                <h4>Contact Us</h4>
+                <ul class="nav">
+                    <li><a href="http://servicedenuages.fr">Blog</a></li>                    
+                    <li><a href="https://mail.mozilla.org/listinfo/kinto">Mailing-list</a></li>
+                    <li><a href="https://twitter.com/hashtag/kinto">Twitter</a></li>
+                    <li><a href="http://stackoverflow.com/questions/tagged/kinto">Stackoverflow</a></li>
+                    <li>#storage on irc.mozilla.org</li>
+                </ul>
+            </div>
+            <div class="col-xs-6 col-md-3 column">
+                <h4>Documentation</h4>
+                <ul class="nav">
+                    <li><a href="#">Kinto python server</a></li>
+                    <li><a href="#">Kinto.js</a></li>
+                    <li><a href="#">Kinto+React.js</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--/row-->
+        <p class="text-right">© 2015</p>
+    </div>
+</footer>
+
+    <!--scripts loaded here-->
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
